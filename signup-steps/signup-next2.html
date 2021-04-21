@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel = "stylesheet" href = "../assets/css/reset.css">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/twitter-icon.ico" type="image/x-icon">
+    <style>
+        .x-button {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            display: inline-block;
+            color: #1da1f2;
+            text-align: center;
+            padding-top: 7px;
+            margin: 15px;
+        }
+
+        .x-button:hover{
+            background-color: rgb(227, 227, 245);
+        }
+
+        .step{
+            font-size: 20px;
+            color: #000;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 17px;
+        }
+
+        .signup-button{
+            width: 100%;
+            height: 50px;
+            background-color: #1da1f2;
+            color: #fff;
+            border-radius: 30px;
+            border: none;
+            font-weight: bold;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .signup-button:hover{
+            background-color: rgb(26, 145, 218);
+        }
+        .agreement-warning{
+            color: rgb(41, 40, 40) !important;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <section class = "Sign-up">
+        <div class = "sign-up-head">
+            <div>
+               <a href = "./signup.html">
+                    <span class="x-button">&#10005;
+                        <span id = "hiddenText">Close</span>
+                    </span>
+                </a>
+                <span class = "step">Step 3 of 5</span>
+            </div>
+        </div>
+
+        <div class = "main-section">
+
+            <h2>Create your account</h2>
+            <form action="/action_page.php" class = "signup-info-form" style = "position: relative;">
+                <div class = "row">
+                    <div class = "col-lg-12 col-md-6 col-sm-3">
+                        <input type="text" id="name" name="name" class = "input-animation" required maxlength="50">
+                        <span class="floating-label">Name</span>
+                    </div>
+                </div>   
+
+                <div class = "row">
+                    <div class = "col-lg-12 col-md-6 col-sm-3">
+                        <input type="tel" id="phone" name="phone"  class = "input-animation" pattern="+994[1-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
+                        <span class="floating-label">Phone</span>
+                    </div>
+                </div>
+
+                <div class = "row">
+                    <div class = "col-lg-12 col-md-6 col-sm-3">
+                        <input type="text" id="birth-date" name="birth" class = "input-animation" required>
+                        <span class="floating-label">Birth Date</span>
+                    </div>
+                </div>
+            </form>
+            
+            
+            <p class = "agreement-warning">By signing up, you agree to the <a href = "#">Terms of Service</a> and <a href = "#">Privacy Policy</a>, including <a href = "#">Cookie Use</a>. Others will be able to find you by email or phone number when provided · <a href = "#">Privacy Options</a></p>
+            <a href = "./signup-next3.html">
+                <button class = "signup-button">Sign Up</button>
+            </a>
+    </section>
+    <script src = "../assets/twitter.js"></script>
+</body>
+</html>

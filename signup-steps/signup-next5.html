@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel = "stylesheet" href = "../assets/css/reset.css">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/twitter-icon.ico" type="image/x-icon">
+    <style>
+        
+
+        a{
+            font-size: 14px !important;
+        }
+
+        #verification-code{
+            margin-top: 0px !important;
+        }
+
+        p{
+            margin: 20px 0px 0px 25px !important;
+        }
+
+        h2{
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <section class = "Sign-up">
+        <div class = "sign-up-head">
+            <span class = "empty-span"></span>
+            <img src = "../assets/images/tweet.png">
+            <button class = "next next-repeat" disabled>Next</button>
+        </div>
+
+        <div class = "main-section">
+        
+            <h2>You'll need a password</h2>
+            <p>Make sure it’s 8 characters or more.</p>
+            <form action="/action_page.php" class = "verification-form">   
+                <div>
+                    <input onkeyup="stoppedTyping()" type="password" id="password" name="password" class = "input-animation inputPassword" required>
+                    <span class="floating-label">Password</span>
+                </div>
+            </form>
+            <a href = "#">Reveal Password</a>
+        </div>
+    </section>
+    <script>
+        //password-Sign Up
+        var inputPassword = document.querySelector(".inputPassword");
+        //Next Button
+        var nextBtn = document.querySelector(".next");
+        
+        function stoppedTyping(){
+        if(inputPassword.value.length > 0){ 
+            nextBtn.disabled = false; 
+            nextBtn.style.opacity = 1
+
+        }else{ 
+            nextBtn.disabled = true;
+            nextBtn.style.opacity = 0.5
+        }
+    };
+
+    </script>
+</body>
+</html>

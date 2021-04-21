@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel = "stylesheet" href = "../assets/css/reset.css">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/twitter-icon.ico" type="image/x-icon">
+    <style>
+
+       h2{
+           margin-bottom: 17px;
+       }
+        
+       p{
+           margin-bottom: 0px !important;
+       }
+
+       form{
+           margin-bottom: 5px;
+       }
+    </style>
+</head>
+<body>
+    <section class = "Sign-up">
+        <div class = "sign-up-head">
+            <a href = "./signup.html">
+                <span class="x-button">&#10005;
+                    <span id = "hiddenText">Close</span>
+                </span>
+            </a>
+            <img src = "../assets/images/tweet.png">
+            <a href = "./signup-next5.html" class = "next-button-link"><button class = "next next-repeat" disabled>Next</button></a>
+        </div>
+
+        <div class = "main-section">
+            <h2>We sent you a code</h2>
+            <p>Enter it below to verify your number</p>
+            <form action="/action_page.php" class = "verification-form">  
+                <div>
+                    <input onkeyup="stoppedTyping()" type="text" id="verification-code" class = "verificationCode" name="verification" required>
+                    <span class="floating-label">Verification Code</span>
+                </div> 
+            </form>
+            <a href = "#" class = "sms">Didn't recieve SMS?</a>
+        </div>
+    </section>
+    <script>
+        //verification input
+        var inputVerification = document.querySelector(".verificationCode");
+        //Next Button
+        var nextBtn = document.querySelector(".next");
+
+        function stoppedTyping(){
+            if(inputVerification.value.length > 0){
+                nextBtn.disabled = false; 
+                nextBtn.style.opacity = 1
+            }else{ 
+                nextBtn.disabled = true;
+                nextBtn.style.opacity = 0.5
+            }
+        }
+    </script>
+</body>
+</html>

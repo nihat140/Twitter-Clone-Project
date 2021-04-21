@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel = "stylesheet" href = "../assets/css/reset.css">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/twitter-icon.ico" type="image/x-icon">
+    <style>
+        .track{
+            font-weight: bold;
+            margin-top: 45px;
+            font-size: 20px;
+        }
+
+        .warning-info{
+            text-align: justify;
+            width: 470px;
+            color: rgb(41, 40, 40) !important;
+            font-size: 15px !important;
+            float: left;
+        }
+
+        #myCheck{
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            float: right;
+            background-color: #1da1f2; 
+        }
+
+        .more-details{
+            clear: both;
+            font-size: 15px !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <section class = "Sign-up">
+        <div class = "sign-up-head">
+            <a href = "./signup.html">
+                <span class="x-button">&#10005;
+                    <span id = "hiddenText">Close</span>
+                </span>
+            </a>
+            <img src = "../assets/images/tweet.png">
+            <a href = "./signup-next2.html" class = "next-button-link"><button class = "next">Next</button></a>
+        </div>
+
+        <div class = "main-section">
+
+            <h2>Customize your experience</h2>
+            <h3 class = "track">Track where you see Twitter content across the web</h3>
+
+            <div class = "row checkbox-paragraph">
+                <p class = "warning-info col-9">Twitter uses this data to personalize your experience. This web browsing history will never be stored with your name, email, or phone number.
+                </p>  
+                <input type="checkbox" id="myCheck" class = "col-3" checked> 
+            </div>
+            <p class = "more-details">For more details about these settings, visit the <a href = "#">Help Center</a></p>
+        </div>
+    </section>
+    <script src = "../assets/twitter.js"></script>
+</body>
+</html>

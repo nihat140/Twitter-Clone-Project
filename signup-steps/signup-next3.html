@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel = "stylesheet" href = "../assets/css/reset.css">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/images/twitter-icon.ico" type="image/x-icon">
+    <style>
+        .verification-phone{
+            width: 320px;
+            height: 220px;
+            border: 1px solid rgb(207, 203, 203);
+            border-radius: 15px;
+            text-align: center;
+            padding: 25px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0 auto;
+            margin-top: 200px;
+        }
+
+        h1{
+            font-weight: 650;
+            font-size: 21px;
+        }
+
+        p{
+            margin: 25px 0px;
+            font-size: 16px;
+            color: #5b7083;
+            word-spacing: 3px;
+        }
+
+        .decision-buttons{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .decision-buttons button{
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            font-weight: 800;
+            font-size: 13px;
+        }
+
+        .decision-buttons a{
+            text-decoration: none;
+        }
+
+        #ok-button{
+            background-color: #1da1f2;
+            color: #fff;
+        }
+
+        #ok-button:hover{
+            background-color: rgb(26, 145, 218);
+        }
+
+        #edit-button{
+            color: #000;
+        }
+
+        #edit-button, #ok-button{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <section class = "verification-phone">
+        <h1>Verify phone</h1>
+        <p>We'll text your verification code to your phone. Standard SMS fees may apply.</p>
+        <div class = "decision-buttons">
+            <a href = "./signup.html"><button id = "edit-button">Edit</button></a>
+            <a href = "./signup-next4.html" class = "next-button-link"><button id = "ok-button">OK</button></a>
+        </div>
+    </section>
+    <script src = "../assets/twitter.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keyword" content="twitter">
+    <title>Login on Twitter / Twitter</title>
+    <meta name="viewpoint" content="width=device-width, inital-scale=1.0">
+    <meta name="description" content="From breaking news and entertainment to sports and politics, get the full story with all the live commentary.">
+    <meta name="author" content="Aytac Mehemmedli, Nihat Abbasov, Emil Taciyev">
+
+    <link rel="shortcut icon" href="assets/images/twitter-icon.ico" type="image/x-icon">    
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://abs-0.twimg.com/login/password-reset.ec5af2e5fcc4c119dd2e3bc0422041416162460e.css" rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+
+    @media only screen and (max-width: 380px) {
+
+        .login-page-container *:not(.login-twitter-logo){
+            width: 0;
+            width: 100%;
+
+        }
+        .floating-label-0{
+            width: 100%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+          
+    }
+      </style>
+</head>
+<body>
+    <div class="login-page-container">
+        <div class="login-main-container">
+              <a href="./index.html"><img src="./assets/images/twitter-icon.ico" alt="twitter-logo" class="login-twitter-logo" ></a>
+            <div class="login-item-container">
+                <h2>Log in to Twitter</h2>
+                <form action="#" method="POST">
+                    <div>
+                        <input onkeyup="stoppedTyping()" type="text" class="inputText" required autofocus>
+                        <span class="floating-label-0">Phone, email, or username</span>
+                      </div>
+                      <div>
+                        <input onkeyup="stoppedTyping()" type="password" class="inputText inputText2" required>
+                        <span class="floating-label-0">Password</span>
+                      </div>
+                      <input type="submit" value="Log in" class="login-page-btn" disabled>
+                </form>
+                <div class="login-footer">
+                    <a href="./forgot-password.html">Forgot password?</a>
+                    <span style="font-size: 12px; color: #5b7083;">·</span>
+                    <a href="./signup-steps/signup.html">Sign up for Twitter</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+<script>
+    var inputdata = document.querySelector(".inputText");
+    var inputdata2 = document.querySelector(".inputText2");
+    var loginbtn = document.querySelector(".login-page-btn");
+
+    function stoppedTyping(){
+        if((inputdata.value.length > 0) && (inputdata2.value.length > 0)) { 
+            loginbtn.disabled = false; 
+            loginbtn.style.opacity = 1
+        } else { 
+            loginbtn.disabled = true;
+            loginbtn.style.opacity = 0.5
+
+        };
+    };
+</script>
+</body>
+</html>
